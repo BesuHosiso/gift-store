@@ -3,6 +3,7 @@ import '../App.css'
 import './home.css'
 import Button from '../components/loginbtn.jsx';
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const CategoryCard = ({ title, info, imgSrc }) => {
       return (
@@ -69,8 +70,8 @@ const Home = () => {
             <h1>Premium Tech & <span>Warming Gift</span></h1>
             <p>Discover the perfect high-end electronics curated specifically for the people who matter most.</p>
               <div className='btns'>
-                <button className='btnh'>Shop Gifts</button>
-                <button className='btnh2'>Explore Deals</button>
+                <Link to="/products" className='btnh'>Shop Gifts</Link>
+                <Link to="/products" className='btnh2'>Explore Deals</Link>
               </div>
           </div>
           <div className='img-card'>
@@ -83,7 +84,7 @@ const Home = () => {
                 <h2>Shop by Intent</h2>
                 <p>Curated collections for every lifestyle.</p>
               </div>
-              <a href='#' className='view-all'>View All</a>
+              <Link to="/products" className='view-all'>View All</Link>
            </div>
            <div className='category-cards'>
              {categoryData.map(category => 
