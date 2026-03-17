@@ -1,0 +1,121 @@
+/* ==========================================================================
+   1. GOOGLE FONTS IMPORT
+   ========================================================================== */
+/* Importing 'Outfit' (for headings) and 'Inter' (for body text) */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;600;700&display=swap');
+
+/* ==========================================================================
+   2. CSS VARIABLES (DESIGN SYSTEM)
+   ========================================================================== */
+:root {
+  /* --- BRAND COLORS --- */
+  
+  /* Midnight Indigo - The Trust Color */
+  /* USE FOR: Top navigation bar, Footer background, Main Hero banners, Logo text */
+  --color-primary-dark: #0B192C; 
+
+  /* Brushed Copper / Rose Gold - The Action & Gift Color */
+  /* USE STRICTLY FOR: "Add to Cart" buttons, "Buy Now" buttons, Sale badges, Links on hover */
+  --color-accent-action: #F97316; 
+
+  /* --- BACKGROUND COLORS --- */
+
+  /* Pearl Off-White - The Base Background */
+  /* USE FOR: The main body background of your entire website */
+  --color-bg-base: #F7F7F8; 
+
+  /* Pure White - The Product Spotlight */
+  /* USE FOR: The background of the "Product Cards" (the boxes holding the laptop images), Dropdown menus */
+  --color-bg-card: #FFFFFF; 
+
+  /* --- TEXT COLORS --- */
+
+  /* Slate Black - Primary Text Color */
+  /* USE FOR: All paragraph text, product descriptions, tech specs (RAM, CPU), customer reviews */
+  --color-text-main: #1A1A1A; 
+
+  /* White Text - For dark backgrounds */
+  /* USE FOR: Text sitting inside the Midnight Indigo footer or inside the Brushed Copper buttons */
+  --color-text-light: #FFFFFF; 
+
+  /* --- FONTS --- */
+
+  /* Outfit - Primary Heading Font */
+  /* USE FOR: Logo, H1/H2/H3 tags, Product Titles (e.g., "MacBook Pro 16"), Big Promotional Text */
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Inter - Secondary Body Font */
+  /* USE FOR: Paragraphs, Tech Specs, Navigation Links, Footer Links, Buttons */
+  --font-body: 'Inter', sans-serif;
+}
+
+/* ==========================================================================
+   3. QUICK EXAMPLES OF HOW TO USE THESE VARIABLES
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Base Website Setup */
+body {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-light);
+  font-family: var(--font-body); /* Pearl off-white background */  
+  font-size: 16px;
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  padding-inline: clamp(1rem, 2vw + 0.5rem, 2rem);
+  overflow-x: hidden;
+}
+
+
+
+/* Headings & Product Titles */
+h1, h2, h3, h4, .product-title {
+  font-family: var(--font-heading);       /* 'Outfit' for premium tech look */
+  color: var(--color-text-light);       /* White text for trustworthy headers */
+  font-weight: 700;
+}
+
+/* Top Navigation Bar & Footer */
+.navbar, .site-footer {
+  background-color: var(--color-primary-dark); /* Midnight Indigo */
+  color: var(--color-text-light);              /* White text */
+}
+
+/* Primary Call-to-Action Buttons (Add to Cart) */
+.btn-primary {
+  background-color: var(--color-accent-action); /* Brushed Copper to draw the eye */
+  color: var(--color-text-light);               /* White text */
+  font-family: var(--font-body);                /* 'Inter' so it's easy to read */
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;                           /* Slightly rounded for modern tech feel */
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+}
+
+.btn-primary:hover {
+  opacity: 0.9; /* Subtle effect when user hovers over the button */
+}
+
+/* Product Cards (The box displaying the laptop/tablet) */
+.product-card {
+  background-color: var(--color-bg-card); /* Pure White to make the device pop */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(11, 25, 44, 0.05); /* Very soft shadow using Indigo */
+}
+
+/* Sale Badges on Product Cards */
+.sale-badge {
+  background-color: var(--color-accent-action); /* Brushed Copper */
+  color: var(--color-text-light);               /* White text */
+  font-family: var(--font-heading);             /* 'Outfit' to make the discount pop */
+}

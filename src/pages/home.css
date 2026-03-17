@@ -1,0 +1,511 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Outfit:wght@400;600;700&display=swap');
+
+/* ==========================================================================
+   2. CSS VARIABLES (DESIGN SYSTEM)
+   ========================================================================== */
+:root {
+  /* --- BRAND COLORS --- */
+  
+  /* Midnight Indigo - The Trust Color */
+  /* USE FOR: Top navigation bar, Footer background, Main Hero banners, Logo text */
+  --color-primary-dark: #0B192C; 
+
+  /* Brushed Copper / Rose Gold - The Action & Gift Color */
+  /* USE STRICTLY FOR: "Add to Cart" buttons, "Buy Now" buttons, Sale badges, Links on hover */
+  --color-accent-action: #F97316; 
+
+  /* --- BACKGROUND COLORS --- */
+
+  /* Pearl Off-White - The Base Background */
+  /* USE FOR: The main body background of your entire website */
+  --color-bg-base: #F7F7F8; 
+
+  /* Pure White - The Product Spotlight */
+  /* USE FOR: The background of the "Product Cards" (the boxes holding the laptop images), Dropdown menus */
+  --color-bg-card: #FFFFFF; 
+
+  /* --- TEXT COLORS --- */
+
+  /* Slate Black - Primary Text Color */
+  /* USE FOR: All paragraph text, product descriptions, tech specs (RAM, CPU), customer reviews */
+  --color-text-main: #1A1A1A; 
+
+  /* White Text - For dark backgrounds */
+  /* USE FOR: Text sitting inside the Midnight Indigo footer or inside the Brushed Copper buttons */
+  --color-text-light: #FFFFFF; 
+
+  /* --- FONTS --- */
+
+  /* Outfit - Primary Heading Font */
+  /* USE FOR: Logo, H1/H2/H3 tags, Product Titles (e.g., "MacBook Pro 16"), Big Promotional Text */
+  --font-heading: 'Outfit', sans-serif;
+
+  /* Inter - Secondary Body Font */
+  /* USE FOR: Paragraphs, Tech Specs, Navigation Links, Footer Links, Buttons */
+  --font-body: 'Inter', sans-serif;
+}
+
+.section {
+  padding: 5rem 1rem;
+  color: var(--color-text-light);
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+}
+
+.intro h1 {
+  font-family: var(--font-heading);
+  font-weight: 900;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  color: var(--color-text-light);
+  text-transform: uppercase;
+  white-space: nowrap;
+  letter-spacing: -0.5px;
+  line-height: 1.1;
+}
+
+.section p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+  color: var(--color-text-light);
+  margin-block: 1rem;
+}
+
+.home-start {
+    width: 100%;
+    min-height: 100dvh;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    place-items: center;
+    box-sizing: border-box;
+}
+
+.intro span {
+    color: var(--color-accent-action);
+    display: block;
+}
+
+.intro .btns {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-top: 1rem;
+    align-items: center;
+    width: 100%;
+
+}
+
+.btns .btnh {
+    background-color: var(--color-accent-action);
+    color: var(--color-text-light);
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: none;
+    border-radius: 6px;
+    padding: 18px 40px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.btns .btnh:hover {
+    transform: scale(1.1);
+}
+
+.btns .btnh2 {
+    color: var(--color-text-light);
+    background: transparent;
+    font-size: 1.1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: 2px solid #334155;
+    border-radius: 6px;
+    padding: 18px 40px;
+    cursor: pointer;
+    transition:  0.3s ease;
+}
+
+.btns .btnh2:hover {
+    transform: scale(1.1);
+    border-color: var(--color-accent-action);
+}
+
+.img-card {
+  width: 100%;
+  max-width: 400px;
+  height: 500px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 1rem auto;
+ 
+  transform: rotate(5deg) scale(1);
+}
+
+.img-card:hover img{
+  transform: scale(1.1);
+  
+}
+
+.img-card img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-position: center;
+  object-fit: cover;
+   transition: transform 0.4s cubic-bezier(0.6, 0.03, 0.28, 0.98);
+}
+
+.home-middle {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.home-middle .mid-headings {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.home-middle .mid-headings h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    color: var(--color-text-light);
+}
+
+.home-middle .mid-headings p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+}
+
+.home-middle .mid-headings .view-all {
+    color: var(--color-text-light);
+    font-family: var(--font-body);
+    font-weight: 500;
+    font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: border-color 0.3s ease;
+}
+
+.home-middle .mid-headings .view-all:hover {
+    border-color: var(--color-accent-action);
+    color: var(--color-accent-action)
+}
+
+.home-middle .category-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    place-items: center;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.category-cards .card {
+    height: 350px;
+    width: 100%;
+    max-width: 300px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.category-cards .card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.category-cards .card .caption {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), transparent);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 30px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: 0.4s ease;
+}
+
+.category-cards .card .caption h3 {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+  color: var(--color-text-light);
+}
+
+.category-cards .card .caption p {
+  font-family: var(--font-body);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+  color: var(--color-text-light);
+  margin-top: 0.5rem;
+}
+
+.category-cards .card:hover {
+  transform: translateY(-10px);
+}
+
+.category-cards .card:hover img {
+  transform: scale(1.1);
+}
+
+.category-cards .card:hover .caption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.home-end {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 4rem;
+}
+
+.home-end h2 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.5rem, 2vw, 2rem);
+    color: var(--color-text-light);
+}
+
+.home-end .trending-cards {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    overflow-x: auto;
+    box-sizing: border-box;
+    margin-top: 2rem;
+    scroll-behavior: smooth;
+    anchor-name: --carousel;
+    scroll-snap-type: x mandatory;
+}
+
+.trending-cards::-webkit-scrollbar {
+  display: none;
+}
+
+.trending-cards::scroll-button(right), .trending-cards::scroll-button(left) {
+    content: '';
+    background-image: url('../../public/right-arrow.svg');
+    background-size: cover;
+    color: var(--color-text-light);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: none;
+    background-color: var(--color-accent-action);
+    font-family: var(--font-body);
+    font-size: 2rem;
+    /* font-weight: 900; */
+    color: var(--color-text-light);
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    padding-bottom: .1em;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+    position: fixed;
+    position-anchor: --carousel;
+    position-area: right center;
+    translate: -50%;
+}
+
+.trending-cards::scroll-button(left) {
+  content: '';
+   background-image: url('../../public/left-arrow.svg');
+  position-area: left center;
+  translate: 50%;
+}
+
+.trending-cards::scroll-button(right):hover, .trending-cards::scroll-button(left):hover {
+    opacity: 0.9;
+}
+
+.trending-cards::scroll-button(right):disabled, .trending-cards::scroll-button(left):disabled {
+    opacity: 0.5;
+    cursor: auto;
+}
+
+.home-end .trending-cards .trending-card {
+    scroll-snap-align: start;
+    flex: 0 0 22em;
+    /* height: 450px; */
+    aspect-ratio: 4 / 4;
+    width: 100%;
+    max-width: 400px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 12px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: transform 0.3s ease;
+}
+
+@media(max-width: 620px) {
+  .card {
+    flex: 0 0 100%;
+  }
+}
+
+/* .home-end .trending-cards .trending-card:hover {
+    transform: translateY(-10px);
+} */
+
+.home-end .trending-cards .trending-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.4s ease;
+}
+
+/* .home-end .trending-cards .trending-card:hover img {
+    transform: scale(1.05);
+} */
+
+.home-end .trending-cards .trending-card h3 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    color: var(--color-text-light);
+}
+
+.home-end .trending-cards .trending-card p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+}
+
+.home-end .trending-cards .trending-card .price-btn {
+    margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home-end .trending-cards .trending-card .price-btn .price {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    color: var(--color-accent-action);
+}
+
+.home-end .trending-cards .trending-card .price-btn .acart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color-accent-action);
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: 2px solid var(--color-accent-action);
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.rcart-btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+    color: var(--color-text-light);
+    font-size: 1rem;
+    font-family: var(--font-body);
+    font-weight: 600;
+    border: 2px solid var(--color-accent-action);
+    border-radius: 6px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.rcart-btn:hover {
+    opacity: 0.9;
+}
+
+.home-end .trending-cards .trending-card .price-btn .acart-btn:hover {
+    opacity: 0.9;
+}
+
+.home-outcomes {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    margin-top: 4rem;
+    gap: 2rem;
+}
+
+@media (max-width: 800px) {
+    .home-outcomes {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+.home-outcomes .outcome {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.home-outcomes .outcome .outcome-icon {
+    width: 60px;
+    height: 60px;
+    background-color: rgba(85, 62, 51, 0.685);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.home-outcomes .outcome .outcome-icon svg {
+    width: 34px;
+    height: 34px;
+    fill: var(--color-accent-action);
+}
+
+.home-outcomes .outcome h4 {
+    font-family: var(--font-heading);
+    font-weight: 700;
+    font-size: clamp(1.25rem, 1.5vw, 1.75rem);
+    color: var(--color-text-light);
+    margin-top: 0.9rem;
+    margin-bottom: 0;
+}
+
+.home-outcomes .outcome p {
+    font-family: var(--font-body);
+    font-weight: 400;
+    font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
+    color: var(--color-text-light);
+    margin-top: 0.5rem;
+}
