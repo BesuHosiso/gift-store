@@ -44,24 +44,24 @@ const TrendingCard = ({ title, info, imgSrc, price, onAdd, onRemove }) => {
 }
 
 const trendingData = [
-  { id: 1, title: 'Apple iPad Pro', info: 'Ultimate mobile 3D creative power.', imgSrc: '/real-product.jpg', price: '$999.00' },
-  { id: 2, title: 'Apple iPad Air', info: 'Balanced pro performance, with vibrant colors.', imgSrc: '/real-product.jpg', price: '$599.00' },
-  { id: 3, title: 'Samsung Tab S11 Ultra', info: 'Massive premium Android multi-tasking beast.', imgSrc: '/real-product.jpg', price: '$1,199.99' },
-  { id: 4, title: 'Lenovo Yoga 9i Aura Edition', info: 'Premium, convertible, high-performance hybrid laptop.', imgSrc: '/real-product.jpg', price: '$1,630.00' },
-  { id: 5, title: 'MacBook Air M4', info: 'Silent, sleek, ultra-portable productivity icon.', imgSrc: '/real-product.jpg', price: '$1,099.99' },
-  { id: 6, title: 'Dell XPS 14', info: 'Precision, high-end mechanical-feel Windows laptop.', imgSrc: '/real-product.jpg', price: '$1,599.99' }
+  { id: 1, title: 'Apple iPad Pro', info: 'Ultimate mobile 3D creative power.', imgSrc: 'real-product.jpg', price: '$999.00' },
+  { id: 2, title: 'Apple iPad Air', info: 'Balanced pro performance, with vibrant colors.', imgSrc: 'real-product.jpg', price: '$599.00' },
+  { id: 3, title: 'Samsung Tab S11 Ultra', info: 'Massive premium Android multi-tasking beast.', imgSrc: 'real-product.jpg', price: '$1,199.99' },
+  { id: 4, title: 'Lenovo Yoga 9i Aura Edition', info: 'Premium, convertible, high-performance hybrid laptop.', imgSrc: 'real-product.jpg', price: '$1,630.00' },
+  { id: 5, title: 'MacBook Air M4', info: 'Silent, sleek, ultra-portable productivity icon.', imgSrc: 'real-product.jpg', price: '$1,099.99' },
+  { id: 6, title: 'Dell XPS 14', info: 'Precision, high-end mechanical-feel Windows laptop.', imgSrc: 'real-product.jpg', price: '$1,599.99' }
 ];
 
 const categoryData = [
-  { id: 1, title: 'Students', info: 'Lightweight and Powerful', imgSrc: '/student.jpg' },
-  { id: 2, title: 'Creatives', info: 'Tablets & Workstations', imgSrc: '/creative.jpg' },
-  { id: 3, title: 'Gaming', info: 'High-Performance Hub', imgSrc: '/gaming.jpg' },
-  { id: 4, title: 'Developers', info: 'Powerful Tools & Laptops', imgSrc: '/developer.jpg' },
-  { id: 5, title: 'Professionals', info: 'Business-Ready Tech', imgSrc: '/professional.jpg' },
-  { id: 6, title: 'Everyday', info: 'Versatiles Essentials', imgSrc: '/everyday.jpg' }
+  { id: 1, title: 'Students', info: 'Lightweight and Powerful', imgSrc: 'student.jpg' },
+  { id: 2, title: 'Creatives', info: 'Tablets & Workstations', imgSrc: 'creative.jpg' },
+  { id: 3, title: 'Gaming', info: 'High-Performance Hub', imgSrc: 'gaming.jpg' },
+  { id: 4, title: 'Developers', info: 'Powerful Tools & Laptops', imgSrc: 'developer.jpg' },
+  { id: 5, title: 'Professionals', info: 'Business-Ready Tech', imgSrc: 'professional.jpg' },
+  { id: 6, title: 'Everyday', info: 'Versatiles Essentials', imgSrc: 'everyday.jpg' }
 ];
 
-const Home = ({ onAdd, onRemove }) => {
+const Home = () => {
   return (
     <section className='section'>
         <div className='home-start'>
@@ -74,7 +74,7 @@ const Home = ({ onAdd, onRemove }) => {
               </div>
           </div>
           <div className='img-card'>
-            <img src="/real-product.jpg" alt="product image" />
+            <img src="real-product.jpg" alt="product image" />
           </div>
         </div>
         <div className='home-middle'>
@@ -105,8 +105,8 @@ const Home = ({ onAdd, onRemove }) => {
                          info={item.info} 
                          imgSrc={item.imgSrc} 
                          price={item.price}
-                         onAdd={onAdd}
-                         onRemove={onRemove}
+                         onAdd={item.onAdd}
+                         onRemove={item.onRemove}
                          item={item} />
               )}
             
