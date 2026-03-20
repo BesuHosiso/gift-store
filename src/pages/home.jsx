@@ -62,7 +62,7 @@ const categoryData = [
   { id: 6, title: 'Everyday', info: 'Versatiles Essentials', imgSrc: 'everyday.jpg' }
 ];
 
-const Home = () => {
+const Home = ({ onAdd, onRemove }) => {
   return (
     <section className='section'>
         <div className='home-start'>
@@ -106,8 +106,8 @@ const Home = () => {
                          info={item.info} 
                          imgSrc={item.imgSrc} 
                          price={item.price}
-                         onAdd={item.onAdd}
-                         onRemove={item.onRemove}
+                         onAdd={onAdd}
+                         onRemove={onRemove}
                          item={item} />
               )}
             
