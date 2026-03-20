@@ -459,8 +459,8 @@
     }
 
     .btns .btnh, .btns .btn2, .acart-btn, .rcart-btn {
-        padding: 10px 16px !important;
-        font-size: 1rem !important;
+        padding: 10px 10px !important;
+        font-size: 0.7rem !important;
     }
 
     .img-card {
