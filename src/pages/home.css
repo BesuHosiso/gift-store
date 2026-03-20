@@ -272,9 +272,6 @@
     overflow-x: auto;
     box-sizing: border-box;
     margin-top: 2rem;
-    scroll-behavior: smooth;
-    anchor-name: --carousel;
-    scroll-snap-type: x mandatory;
 }
 
 .home-end .trending-cards .trending-card {
@@ -437,4 +434,36 @@
     font-size: clamp(0.875rem, 0.8rem + 0.5vw, 1rem);
     color: var(--color-text-light);
     margin-top: 0.5rem;
+}
+
+@media (max-width: 700px) {
+    
+     .section {
+        padding: 2.5rem 0.5rem !important;
+        font-size: 1rem;
+    }
+    
+    .home-start, .category-cards, .trending-cards, .home-end {
+        grid-template-columns: 1fr !important;
+        gap: 1rem !important;
+    }
+
+    .category-cards .card, .img-card , .trending-cards .trending-card {
+        max-width: 98vw !important;
+        min-width: 0 !important;
+    }
+
+    .intro h1 {
+        font-size: 2rem !important;
+        white-space: normal !important;
+    }
+
+    .btns .btnh, .btns .btn2, .acart-btn, .rcart-btn {
+        padding: 10px 16px !important;
+        font-size: 1rem !important;
+    }
+
+    .img-card {
+        height: 220px !important;
+    }
 }

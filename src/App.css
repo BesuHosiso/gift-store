@@ -410,3 +410,27 @@ footer .footer-bottom .terms-privacy a:hover {
     display: none;
   }
 }
+
+@media (max-width: 600px) {
+   .header {
+      padding: 10px 12px;
+      flex-direction: column;
+      height: auto;
+   }
+
+   .header-right {
+    gap: 0.5rem;
+   }
+
+   .footer-content {
+    flex-direction: column;
+    padding-inline: 1rem;
+    gap: 12px;
+   }
+}
+
+@media (max-width: 700px) {
+  body, #root {
+    overflow-x: hidden !important;
+  }
+}
