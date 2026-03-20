@@ -14,7 +14,7 @@ const CategoryCard = ({ title, info, imgSrc }) => {
                   <p>{info}</p>
                 </div>
               </div>
-      )
+      ) 
 
 }
 
