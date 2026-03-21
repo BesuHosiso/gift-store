@@ -465,5 +465,6 @@
 
     .img-card {
         height: 220px !important;
+        aspect-ratio: 1 / 1;
     }
 }
