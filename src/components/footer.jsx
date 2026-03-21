@@ -10,9 +10,7 @@ const Footer = () => {
             <div className='footer-left'>
                 <Logo />
                 <p>The ultimate destination for premium tech gifts. We help you find the perfect electronic companions for your loved ones.</p>
-                {/* <div>
-                    I will put Links here
-                </div> */}
+                
             </div>
             <div className='footer-right'>
                 <div className='page-links'>

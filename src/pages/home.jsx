@@ -45,12 +45,12 @@ const TrendingCard = ({ title, info, imgSrc, price, onAdd, onRemove }) => {
 }
 
 const trendingData = [
-  { id: 1, title: 'Apple iPad Pro', info: 'Ultimate mobile 3D creative power.', imgSrc: 'real-product.jpg', price: '$999.00' },
-  { id: 2, title: 'Apple iPad Air', info: 'Balanced pro performance, with vibrant colors.', imgSrc: 'real-product.jpg', price: '$599.00' },
-  { id: 3, title: 'Samsung Tab S11 Ultra', info: 'Massive premium Android multi-tasking beast.', imgSrc: 'real-product.jpg', price: '$1,199.99' },
-  { id: 4, title: 'Lenovo Yoga 9i Aura Edition', info: 'Premium, convertible, high-performance hybrid laptop.', imgSrc: 'real-product.jpg', price: '$1,630.00' },
-  { id: 5, title: 'MacBook Air M4', info: 'Silent, sleek, ultra-portable productivity icon.', imgSrc: 'real-product.jpg', price: '$1,099.99' },
-  { id: 6, title: 'Dell XPS 14', info: 'Precision, high-end mechanical-feel Windows laptop.', imgSrc: 'real-product.jpg', price: '$1,599.99' }
+  { id: 1, title: 'Apple iPad Pro', info: 'Ultimate mobile 3D creative power.', imgSrc: 'pro.jpg', price: '$999.00' },
+  { id: 2, title: 'Apple iPad Air', info: 'Balanced pro performance, with vibrant colors.', imgSrc: 'air.jpg', price: '$599.00' },
+  { id: 3, title: 'Samsung Tab S11 Ultra', info: 'Massive premium Android multi-tasking beast.', imgSrc: 'samsung.jpg', price: '$1,199.99' },
+  { id: 4, title: 'Lenovo Yoga 9i Aura Edition', info: 'Premium, convertible, high-performance hybrid laptop.', imgSrc: 'lenvo.jpg', price: '$1,630.00' },
+  { id: 5, title: 'MacBook Air M4', info: 'Silent, sleek, ultra-portable productivity icon.', imgSrc: 'mac.jpg', price: '$1,099.99' },
+  { id: 6, title: 'Dell XPS 14', info: 'Precision, high-end mechanical-feel Windows laptop.', imgSrc: 'Dell.jpg', price: '$1,599.99' }
 ];
 
 const categoryData = [
