@@ -5,7 +5,7 @@
 
 [![Technologies Used](https://skillicons.dev/icons?i=js,react,vite&perline=3)](https://skillicons.dev)
 
-[**Explore Live Demo**](https://besuhosiso.github.io/gift-store)
+[**Explore Live Demo**](https://besufikadhosiso.github.io/gift-store)
 
 </div>
 
